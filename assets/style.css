@@ -1,0 +1,20 @@
+body {
+    background-image: url("./images/background-img.jpg");
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #F28F86;
+    width: 100%;
+}
+
+.left-container {
+    border: 1px solid white;
+}
+.right-container {
+    border: 1px solid white;
+}
