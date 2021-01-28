@@ -14,7 +14,26 @@ header {
 
 .left-container {
     border: 1px solid white;
+    height: auto;
 }
+
 .right-container {
     border: 1px solid white;
+    height: auto;
+    text-align: center;
+} 
+
+li {
+    text-decoration: none;
+}
+
+.weather-description {
+    text-transform: capitalize;
+}
+
+.forecast-card {
+    display: inline-block;
+    text-align: center;
+    margin-left: 7.5px;
+    margin-right: 7.5px;
 }
