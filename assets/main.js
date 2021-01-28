@@ -7,9 +7,9 @@ $("#search-btn").click(function() {
     var searchInput = $("#search-input").val();
 
     // Store a list item with the name of the cities that have been searched
-    var listItem = $("<li>").addClass("list-group-item-action list-group-item-light my-2 py-2 text-center previous-search").attr("value", searchInput).appendTo($("ul"));
+    var listItem = $("<li>").addClass("list-group-item-action list-group-item-light my-2 py-2 text-center previous-search").appendTo($("#search-history"));
     listItem.text(searchInput);
-    
+    console.log(listItem.text())
     // empty the search field once function called
     $("#today-weather").empty();
     $("#forecast-weather").empty();
@@ -19,9 +19,9 @@ $("#search-btn").click(function() {
     getWeatherForecast();
 })
 
-$(".previous-search").click(function() {
-    getCurrentWeather(searchInput)
-    console.log(getCurrentWeather(searchInput))
+$("#search-history").on("click", "li", function() {
+    getCurrentWeather($(this).text())
+    console.log($(this).text())
 })
 
 function getCurrentWeather() {
