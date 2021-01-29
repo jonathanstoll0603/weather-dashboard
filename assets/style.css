@@ -1,30 +1,43 @@
 body {
-    background-image: url("./images/background-img.jpg");
+    background-image: url("./images/background-img1.jpg");
     background-size: cover;
-    height: 800px;
+    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #F28F86;
+    background-color:#011E57;
     width: 100%;
 }
 
 .left-container {
-    border: 1px solid white;
     height: auto;
+
 }
 
 .right-container {
-    border: 1px solid white;
     height: auto;
     text-align: center;
 } 
 
+.form-label {
+    width: 40%;
+    background-color: #C3CEE4;
+}
+
 li {
     text-decoration: none;
+    background-color: #C3CEE4;
+}
+
+#search-input {
+    background-color: #C3CEE4;
+
+}
+#search-btn {
+    background-color: #C3CEE4;
 }
 
 .weather-description {

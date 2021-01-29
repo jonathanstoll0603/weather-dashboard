@@ -19,7 +19,7 @@ $(document).ready(function() {
 
     function displayListItem(value) {
         // Store a list item with the name of the cities that have been searched
-        var listItem = $("<li>").addClass("list-group-item-action list-group-item-light my-2 py-2 text-center previous-search").appendTo($("#search-history"));
+        var listItem = $("<li>").addClass("list-group-item-action my-2 py-2 previous-search").appendTo($("#search-history"));
         listItem.text(value);
     }
 
@@ -55,7 +55,7 @@ $(document).ready(function() {
                     return;
                 }
                 // Create a div card container and append to "today-weather" div
-                var card = $("<div style='width:100%'>").addClass("card bg-light");
+                var card = $("<div style='width:100%; background-color: #C3CEE4'>").addClass("card");
                 card.appendTo($("#today-weather"));
                 // create cardBody and append to card
                 var cardBody = $("<div style='width:100%'>").addClass("card-body").appendTo(card);
@@ -117,7 +117,7 @@ $(document).ready(function() {
                     // If  
                     if (forecastData.list[i].dt_txt.indexOf("12:00:00") !== -1) {
                         // Create a div card container and append to "forecast-weather"
-                        var card = $("<div style='max-width: 10rem; max-height: 10rem'>").addClass("card bg-light forecast-card");
+                        var card = $("<div style='max-width: 10rem; max-height: 10rem; background-color: #C3CEE4'>").addClass("card forecast-card");
                         card.appendTo(forecastWeatherDiv);
 
                         // create card title with current date
@@ -147,7 +147,6 @@ $(document).ready(function() {
     // set variables of currentSearchHistory/forecastSearchHistory = to an empty array or the city of the user's search history based off of click text value.
     var currentSearchHistory = JSON.parse(window.localStorage.getItem("currentSearchHistory")) || [];
     var forecastSearchHistroy = JSON.parse(window.localStorage.getItem("forecastSearchHistroy")) || [];
-    console.log(currentSearchHistory, forecastSearchHistroy)
 
     if (currentSearchHistory.length > 0) {
         getCurrentWeather(currentSearchHistory[currentSearchHistory.length-1]);
@@ -155,7 +154,6 @@ $(document).ready(function() {
 
     for (var i = 0; i < currentSearchHistory.length; i++) {
         displayListItem(currentSearchHistory[i]);
-        console.log(currentSearchHistory[i])
     }
 })
 
