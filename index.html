@@ -8,10 +8,13 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
+
+    <!-- Header Section -->
     <header class="container-fluid text-center text-light p-3">
         <h1>Your Weather Dashboard</h1>
     </header>
 
+    <!-- Left hand container that stores search inputs and allows user to serach -->
     <div class="container-fluid">
         <div class="row py-3">
             <div class=" container-fluid col-md float-left mx-3 my-3 left-container text">
@@ -20,14 +23,13 @@
                     <button type="submit" id="search-btn" class="btn col-md-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16"><path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/><path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
                     </button>
                 </div>
-                <ul class="list-group row py-2" id="search-history">
-                    <!-- <li class="list-group-item-action list-group-item-light py-2">ex1.. need to dynamically add these in</li> -->
-                </ul>
+                <ul class="list-group row py-2" id="search-history"></ul>
                 
+            <!-- Right container with current day weather and weather forecast containers -->
             </div>
             <div class="col-md-8 float-right my-3 mx-3 right-container">
-                <div class="m-2" id="today-weather"></div>
-                <div class="m-2" id="forecast-weather"></div>                   
+                <div class="container-fluid" id="today-weather"></div>
+                <div class="container-fluid" id="forecast-weather"></div>                   
             </div>
         </div>
     </div>

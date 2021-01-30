@@ -55,7 +55,7 @@ $(document).ready(function() {
                     return;
                 }
                 // Create a div card container and append to "today-weather" div
-                var card = $("<div style='width:100%; background-color: #C3CEE4'>").addClass("card");
+                var card = $("<div style='width:100%;'>").addClass("card");
                 card.appendTo($("#today-weather"));
                 // create cardBody and append to card
                 var cardBody = $("<div style='width:100%'>").addClass("card-body").appendTo(card);
@@ -108,16 +108,16 @@ $(document).ready(function() {
                 console.log(forecastData);
 
                 var forecastWeatherDiv = $("#forecast-weather");
-
-                var header = $("<h4>").text("Five Day Forecast")
-                header.appendTo($("#forecast-weather"));
+                // var forecastWeatherDiv = $("<div style='width: 100%'>").addClass("card d-inline forecast-div").appendTo("#forecast-weather");
+                var header = $("<h5>").addClass("card-header forecast-header text-light py-3").text("Five Day Forecast:")
+                header.appendTo(forecastWeatherDiv);
 
                 // loop that runs through entire object.list
                 for (var i = 0; i < forecastData.list.length; i++) {
                     // If  
                     if (forecastData.list[i].dt_txt.indexOf("12:00:00") !== -1) {
                         // Create a div card container and append to "forecast-weather"
-                        var card = $("<div style='max-width: 10rem; max-height: 10rem; background-color: #C3CEE4'>").addClass("card forecast-card");
+                        var card = $("<div style='max-width: 10rem; max-height: 10rem'>").addClass("card forecast-card");
                         card.appendTo(forecastWeatherDiv);
 
                         // create card title with current date

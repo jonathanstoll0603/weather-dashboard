@@ -1,7 +1,7 @@
 body {
     background-image: url("./images/background-img1.jpg");
     background-size: cover;
-    height: 100%;
+    height: auto;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -14,22 +14,31 @@ header {
 
 .left-container {
     height: auto;
-
 }
 
 .right-container {
     height: auto;
-    text-align: center;
+    /* text-align: center; */
 } 
+
+.card {
+    background-color: rgba(195, 206, 228, 0.9);
+    text-align: center;
+}
 
 .form-label {
     width: 40%;
-    background-color: #C3CEE4;
+    background-color: rgba(195, 206, 228, 0.9);
+}
+
+.forecast-header {
+    margin: 0 auto;
+    width: auto;
 }
 
 li {
     text-decoration: none;
-    background-color: #C3CEE4;
+    background-color: rgba(195, 206, 228, 0.9);
 }
 
 #search-input {
@@ -46,7 +55,8 @@ li {
 
 .forecast-card {
     display: inline-block;
+    background-color: rgba(195, 206, 228, 0.9);
     text-align: center;
-    margin-left: 7.5px;
-    margin-right: 7.5px;
+    padding-left: 10px;
+    margin: 5px;
 }
